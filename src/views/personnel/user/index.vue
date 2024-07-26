@@ -303,16 +303,9 @@ export default {
         mail: [
           { required: true, message: '请输入邮箱', trigger: 'blur' }
         ],
-        jobNumber: [
-          { required: true, message: '请输入工号', trigger: 'blur' },
-          { min: 0, max: 20, message: '长度在 0 到 20 个字符', trigger: 'blur' }
-        ],
         nickname: [
           { required: true, message: '请输入昵称', trigger: 'blur' },
           { min: 2, max: 20, message: '长度在 2 到 20 个字符', trigger: 'blur' }
-        ],
-        mobile: [
-          { required: true, validator: checkPhone, trigger: 'blur' }
         ],
         status: [
           { required: true, message: '请选择状态', trigger: 'change' }
