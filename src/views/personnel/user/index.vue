@@ -51,7 +51,7 @@
         <el-table-column type="selection" width="55" align="center" />
         <el-table-column show-overflow-tooltip sortable prop="username" label="用户名" />
         <el-table-column show-overflow-tooltip sortable prop="nickname" label="中文名" />
-        <el-table-column show-overflow-tooltip sortable prop="givenName" label="花名" />
+        <el-table-column show-overflow-tooltip sortable prop="givenName" label="名" />
         <!-- 使用按钮方式展示，以后改成布尔参数比较合适 -->
         <el-table-column label="状态" align="center">
           <template slot-scope="scope">
@@ -65,7 +65,6 @@
         </el-table-column> -->
         <el-table-column show-overflow-tooltip sortable prop="mail" label="邮箱" />
         <el-table-column show-overflow-tooltip sortable prop="mobile" label="手机号" />
-        <el-table-column show-overflow-tooltip sortable prop="jobNumber" label="工号" />
         <el-table-column show-overflow-tooltip sortable prop="departments" label="部门" />
         <el-table-column show-overflow-tooltip sortable prop="position" label="职位" />
         <el-table-column show-overflow-tooltip sortable prop="creator" label="创建人" />
@@ -113,13 +112,13 @@
               </el-form-item>
             </el-col>
             <el-col :span="12">
-              <el-form-item label="中文名字" prop="nickname">
-                <el-input v-model.trim="dialogFormData.nickname" placeholder="中文名字" />
+              <el-form-item label="中文名" prop="nickname">
+                <el-input v-model.trim="dialogFormData.nickname" placeholder="中文名" />
               </el-form-item>
             </el-col>
             <el-col :span="12">
-              <el-form-item label="花名" prop="givenName">
-                <el-input v-model.trim="dialogFormData.givenName" placeholder="花名" />
+              <el-form-item label="名" prop="givenName">
+                <el-input v-model.trim="dialogFormData.givenName" placeholder="名" />
               </el-form-item>
             </el-col>
             <el-col :span="12">
@@ -489,22 +488,6 @@ export default {
         Message({
           showClose: true,
           message: '请填写邮箱',
-          type: 'error'
-        })
-        return false
-      }
-      if (this.dialogFormData.jobNumber === '') {
-        Message({
-          showClose: true,
-          message: '请填写工号',
-          type: 'error'
-        })
-        return false
-      }
-      if (this.dialogFormData.mobile === '') {
-        Message({
-          showClose: true,
-          message: '请填写手机号',
           type: 'error'
         })
         return false
